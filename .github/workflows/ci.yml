@@ -30,7 +30,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-      name: job1
+    - name: job1
       run: cd app
       
     - name: Build
