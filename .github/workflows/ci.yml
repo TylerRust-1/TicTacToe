@@ -29,9 +29,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+
+      name: job1
+      run: cd app
       
     - name: Build
-      run: cd app
       run: npm run build
 
     - name: Deploy
