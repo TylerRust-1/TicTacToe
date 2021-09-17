@@ -18,7 +18,7 @@ class Board extends React.Component {
       />
     );
   }
-
+ 
   render() {
     return (
       <div>
@@ -106,16 +106,19 @@ class Game extends React.Component {
     }
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares={current.squares}
-            onClick={i => this.handleClick(i)}
-          />
-        </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
+      <div className="page">
+        <a href="https://github.com/strrules105/TicTacToe">Github Repository</a>
+        <div className="game">
+          <div className="game-board">
+            <Board
+              squares={current.squares}
+              onClick={i => this.handleClick(i)}
+            />
+          </div>
+          <div className="game-info">
+            <div>{status}</div>
+            <ol>{moves}</ol>
+          </div>
         </div>
       </div>
     );
@@ -123,8 +126,12 @@ class Game extends React.Component {
 }
 
 // ========================================
-
-ReactDOM.render(<Game />, document.getElementById("root"));
+//const name = 'Tyler Rust';
+//const element = <h1>Hello, {name}</h1>;
+ReactDOM.render(
+  <Game />, 
+  document.getElementById("root")
+);
 
 function calculateWinner(squares) {
   const lines = [
